@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Windowinfo from './Windowinfo'
+import Animation from './Animation'
+class App extends Component {
+  constructor(props){
+    super(props)
+    
+  }
+  componentDidMount(){
+    
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+
+  render(){
+    return (
+    <div className="App" style={{display:'flex', justifyContent:'center', flexDirection:'center', flexDirection:"column", alignItems:'center' }}>
+      <Windowinfo />
+      <Animation width={400} height={400}/>
+      {/* {ad another listener mouse position so when you move your mouse it shows x and y coordinates} */}
     </div>
-  );
+   );
+  }
 }
 
 export default App;
