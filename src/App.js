@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Windowinfo from './Windowinfo'
 import Animation from './Animation'
+import MouseMove from './MouseMove'
 class App extends Component {
   constructor(props){
     super(props)
@@ -18,6 +19,7 @@ class App extends Component {
     <div className="App" style={{display:'flex', justifyContent:'center', flexDirection:'center', flexDirection:"column", alignItems:'center' }}>
       <Windowinfo />
       <Animation width={400} height={400}/>
+      <MouseMove/>
       {/* {ad another listener mouse position so when you move your mouse it shows x and y coordinates} */}
     </div>
    );
