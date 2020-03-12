@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Animation extends Component {
   state = {
     xPos: 100,
-    dx: 4
+    yPos: 4
   };
   componentDidMount(){
     this.ticker = setInterval(()=>{
@@ -11,25 +11,23 @@ export default class Animation extends Component {
     }, 40)
   }
   componentDidUpdate(prevProps, prevState){
-    // if(prevState.xPos > 600- boxWidth){
       if(prevState.xPos > this.props.width - boxWidth){
       this.setState({
-        dx: -4,
+        yPos: -4,
         xPos: this.props.width - boxWidth -1
-        // xPos: 599
       })
     }
     if(prevState.xPos < 0 ){
       this.setState({
-        dx: 4,
+        yPos: 4,
         xPos: 1
       })
     }
   }
   nextStep(){
-    const { xPos, dx } = this.state 
+    const { xPos, yPos } = this.state 
     this.setState({
-      xPos: xPos + dx
+      xPos: xPos + yPos
     })
   }
   render() {
