@@ -8,7 +8,7 @@ export default class Animation extends Component {
   componentDidMount(){
     this.ticker = setInterval(()=>{
       this.nextStep()
-    }, 60)
+    }, 40)
   }
   componentDidUpdate(prevProps, prevState){
     // if(prevState.xPos > 600- boxWidth){
@@ -42,7 +42,7 @@ export default class Animation extends Component {
     );
   }
 }
-const boxWidth = 100
+const boxWidth = 50
 const styles = {
   container: {
     border: "1px solid",
@@ -51,9 +51,9 @@ const styles = {
   },
   moveMe: {
     position: "absolute",
-    height: "20px",
+    height: "40px",
     width: `${boxWidth}px`,
-    backgroundColor: "#67fe28"
+    backgroundColor: "#000080"
   }
 };
 

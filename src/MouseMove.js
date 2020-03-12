@@ -7,7 +7,6 @@ export default class MouseMove extends Component {
     this.state = { x: 0, y: 0 };
   }
   componentDidMount() {
-    // this.onMouseMove()
     window.addEventListener('mousemove', this.onMouseMove);
   }
 
@@ -22,9 +21,9 @@ export default class MouseMove extends Component {
     const { x, y } = this.state;
     return (
       <>
-        <h1>
+        <h3>
           Mouse coordinates: {x} {y}
-        </h1>
+        </h3>
       </>
     );
   }
